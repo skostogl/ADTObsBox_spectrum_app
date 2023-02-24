@@ -1,0 +1,9 @@
+.DS_Store
+*egg*
+miniconda
+lumi-followup
+${user.home}
+build
+dist
+result*
+Miniconda3*

@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1411</width>
+    <height>835</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>20</y>
+      <width>331</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>ADTObsBox spectrum from NXCALS</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tab_timerange">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>541</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_timerange_1">
+     <attribute name="title">
+      <string>Fill number</string>
+     </attribute>
+     <widget class="QPushButton" name="button_loadinfo">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>70</y>
+        <width>100</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>120</y>
+        <width>501</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>From (CET):</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="from_t1">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>To (CET): </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="to_t2">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>14</x>
+        <y>20</y>
+        <width>490</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label_fillnb">
+         <property name="text">
+          <string>Fill number:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="fillnb">
+         <property name="text">
+          <string>8348</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_from">
+         <property name="text">
+          <string>Start of:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="box_from">
+         <item>
+          <property name="text">
+           <string>RAMP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>INJPHYS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>INJPROB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PRERAMP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FLATTOP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SQUEEZE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ADJUST</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STABLE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>BEAMDUMP</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_to">
+         <property name="text">
+          <string>End of:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="box_to">
+         <item>
+          <property name="text">
+           <string>SQUEEZE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>RAMP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>INJPHYS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>INJPROB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PRERAMP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FLATTOP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ADJUST</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STABLE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>BEAMDUMP</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QCheckBox" name="check_overwrite_info">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>70</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Overwrite info</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_timerange_2">
+     <attribute name="title">
+      <string>Time range</string>
+     </attribute>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>58</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Fills info:</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="info_time">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>511</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>535</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_from_2">
+         <property name="text">
+          <string>From (CET):</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateTimeEdit" name="from_t1_2">
+         <property name="dateTime">
+          <datetime>
+           <hour>19</hour>
+           <minute>52</minute>
+           <second>40</second>
+           <year>2022</year>
+           <month>11</month>
+           <day>5</day>
+          </datetime>
+         </property>
+         <property name="displayFormat">
+          <string>yyyy-MM-dd HH:mm:ss</string>
+         </property>
+         <property name="calendarPopup">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_to_2">
+         <property name="text">
+          <string>To (CET):</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateTimeEdit" name="to_t2_2">
+         <property name="dateTime">
+          <datetime>
+           <hour>20</hour>
+           <minute>23</minute>
+           <second>10</second>
+           <year>2022</year>
+           <month>11</month>
+           <day>5</day>
+          </datetime>
+         </property>
+         <property name="displayFormat">
+          <string>yyyy-MM-dd HH:mm:ss</string>
+         </property>
+         <property name="calendarPopup">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="now_button">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>50</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Now!</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_loadinfo_3">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>60</y>
+        <width>68</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_loadinfo_2">
+      <property name="geometry">
+       <rect>
+        <x>188</x>
+        <y>60</y>
+        <width>143</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select and fills info</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_bunches">
+     <attribute name="title">
+      <string>Bunch info</string>
+     </attribute>
+     <widget class="QTextEdit" name="textEdit_bunchinfo">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>351</width>
+        <height>161</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>50</y>
+        <width>161</width>
+        <height>55</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButton_bunch_info">
+         <property name="text">
+          <string>Load bunch info</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="check_overwrite_info_2">
+         <property name="text">
+          <string>Overwrite bunch info</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QTabWidget" name="tab_plot">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>20</y>
+      <width>841</width>
+      <height>651</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>4</number>
+    </property>
+    <widget class="QWidget" name="tab_B1H">
+     <attribute name="title">
+      <string>B1H</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_B1V">
+     <attribute name="title">
+      <string>B1V</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_B2H">
+     <attribute name="title">
+      <string>B2H</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_B2V">
+     <attribute name="title">
+      <string>B2V</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_debug">
+     <attribute name="title">
+      <string>Debug</string>
+     </attribute>
+     <widget class="QTextEdit" name="text_debug">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>821</width>
+        <height>601</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QCheckBox" name="check_overwrite">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>610</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Overwrite files</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="output_path">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>530</y>
+      <width>441</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_output_path">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>540</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Output path</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_output_path_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>580</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Python path</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="python_path">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>570</y>
+      <width>441</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="run_button">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>640</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Run</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>280</y>
+      <width>541</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Select beam and plane</string>
+    </property>
+    <widget class="QListView" name="nxcals_beamplane">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>100</y>
+       <width>421</width>
+       <height>81</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="list_beamplane">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>B1H</string>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>B2H</string>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>B1V</string>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>B2V</string>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_default_nxcals">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>151</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Default NXCALS variable:</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="default_nxcals">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>30</y>
+       <width>361</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;ObsBox2Spectrum.LHC.ADT.REAL.%.Q7:acquisitionCorrected:acquisition&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_nxcals">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>80</y>
+       <width>151</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>NXCALS variable names:</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>200</y>
+       <width>204</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Time range split(mins.)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="spinbox">
+        <property name="value">
+         <double>60.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>670</y>
+      <width>811</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Spectrogram options</string>
+    </property>
+    <widget class="QCheckBox" name="plot_beam_modes">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Plot beam modes</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>398</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Min. f (Hz):</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="spin_fmin">
+          <property name="maximum">
+           <double>11245.500000000000000</double>
+          </property>
+          <property name="value">
+           <double>7750.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>Max. f (Hz)</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="spin_fmax">
+          <property name="maximum">
+           <double>11245.500000000000000</double>
+          </property>
+          <property name="value">
+           <double>8050.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="update_fmin_fmax">
+        <property name="text">
+         <string>Update</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>20</y>
+       <width>381</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Manually add python code</string>
+     </property>
+     <widget class="QTextEdit" name="python_code">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>281</width>
+        <height>61</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="update_manual">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>20</y>
+        <width>74</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Update</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="update_manual_2">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>50</y>
+        <width>74</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Redraw</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1411</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionScreenshot"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionScreenshot">
+   <property name="text">
+    <string>Screenshot</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>tab_timerange</tabstop>
+  <tabstop>fillnb</tabstop>
+  <tabstop>button_loadinfo</tabstop>
+  <tabstop>box_from</tabstop>
+  <tabstop>from_t1</tabstop>
+  <tabstop>to_t2</tabstop>
+  <tabstop>box_to</tabstop>
+  <tabstop>tab_plot</tabstop>
+  <tabstop>check_overwrite</tabstop>
+  <tabstop>output_path</tabstop>
+  <tabstop>python_path</tabstop>
+  <tabstop>run_button</tabstop>
+  <tabstop>nxcals_beamplane</tabstop>
+  <tabstop>list_beamplane</tabstop>
+  <tabstop>default_nxcals</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
