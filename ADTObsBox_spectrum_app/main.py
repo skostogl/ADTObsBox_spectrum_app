@@ -1,5 +1,5 @@
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QMessageBox, QListWidget, QListWidgetItem, QDialog
+from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QMessageBox, QListWidget, QListWidgetItem, QDialog, QInputDialog
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
